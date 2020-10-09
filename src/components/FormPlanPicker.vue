@@ -72,6 +72,10 @@
     methods: {
       pickPlan (plan) {
         this.selectedPlan = plan
+
+        this.$emit('update', { //связь от ребенка к родителю
+          plan: this.selectedPlan
+        })
       }
     }
   }
